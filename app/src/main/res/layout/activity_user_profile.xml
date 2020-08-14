@@ -22,19 +22,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.008" />
 
-    <TextView
-        android:id="@+id/upLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/home_logout"
-        android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.915"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
-
     <ImageView
         android:id="@+id/upProfileImage"
         android:layout_width="262dp"
@@ -98,11 +85,13 @@
         android:id="@+id/upProfileUpdateBtn"
         android:layout_width="148dp"
         android:layout_height="62dp"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#0CFFFFFF"
+        android:background="@android:color/holo_purple"
+        android:backgroundTint="@android:color/holo_purple"
+        android:fontFamily="@font/benchnine"
         android:text="@string/user_profileUpdate"
         android:textAlignment="center"
         android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
@@ -114,11 +103,13 @@
         android:id="@+id/upDeleteBtn"
         android:layout_width="142dp"
         android:layout_height="59dp"
-        android:background="#00FFFCFC"
-        android:backgroundTint="#00FFFFFF"
+        android:background="@android:color/holo_purple"
+        android:backgroundTint="@android:color/holo_purple"
+        android:fontFamily="@font/benchnine"
         android:text="@string/user_profileDelete"
         android:textAlignment="center"
         android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.81"
@@ -128,17 +119,29 @@
 
     <TextView
         android:id="@+id/upWatermark"
-        android:layout_width="372dp"
-        android:layout_height="69dp"
+        android:layout_width="396dp"
+        android:layout_height="66dp"
         android:fontFamily="@font/lobster"
         android:text="@string/user_waterMark"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
-        android:textSize="50sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintVertical_bias="0.933" />
+
+    <ImageView
+        android:id="@+id/upIcon"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007"
+        app:srcCompat="@drawable/dp2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@
     <string name="email">Email :</string>
     <string name="password">Password :</string>
     <string name="re_enter_password">Re-enter password :</string>
+    <string name="signup">Sign Up</string>
     <string name="login">LogIn</string>
 
     <!--activity2 strings-->
@@ -32,6 +33,23 @@
     <string name="user_profileDelete">Delete Profile</string>
     <string name="user_waterMark">Happy Travelling Josh !</string>
 
+    <!--update profile strings-->
     <string name="user_saveProfileUpdates">Save Updates</string>
+
+    <!--admin side add new vehicles strings-->
+    <string name="vehicle_title">Add Vehicle</string>
+    <string name="vehicle_addImage">Add Image</string>
+    <string name="vehicle_type">Type :</string>
+    <string name="vehicle_availableDistrict">District :</string>
+    <string name="vehicle_driversName">Drivers\' Name :</string>
+    <string name="vehicle_contact">Contact No :</string>
+    <string name="vehicle_cost">Cost per 1km :</string>
+    <string name="vehicle_saveBtn">Save Details</string>
+
+    <!--update admin side vehicle strings-->
+    <string name="vehicle_updateTitle">Update / Delete Vehicle</string>
+    <string name="vehicle_updateImage">Update Image</string>
+    <string name="vehicle_updateBtn">Save Updates</string>
+    <string name="vehicle_deleteBtn">Delete Vehicle</string>
 
 </resources>

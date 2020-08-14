@@ -2,14 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/signupView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg4"
-    tools:context=".MainActivity">
+    tools:context=".UpdateUserProfile">
 
     <TextView
-        android:id="@+id/signup_appName"
+        android:id="@+id/profileUpdate_appName"
         android:layout_width="257dp"
         android:layout_height="61dp"
         android:fontFamily="@font/lobster"
@@ -27,7 +25,7 @@
         app:layout_constraintVertical_bias="0.004" />
 
     <TextView
-        android:id="@+id/signup_Name"
+        android:id="@+id/profileUpdate_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
@@ -41,7 +39,7 @@
         app:layout_constraintVertical_bias="0.286" />
 
     <TextView
-        android:id="@+id/signup_profilePic"
+        android:id="@+id/profileUpdate_profilePic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/profile_picture"
@@ -55,7 +53,7 @@
         app:layout_constraintVertical_bias="0.179" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/signupInputName"
+        android:id="@+id/profileUpdate_InputName"
         android:layout_width="352dp"
         android:layout_height="43dp"
         android:hint=""
@@ -68,7 +66,7 @@
         app:layout_constraintVertical_bias="0.324" />
 
     <TextView
-        android:id="@+id/signup_address"
+        android:id="@+id/profileUpdate_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/address"
@@ -82,7 +80,7 @@
         app:layout_constraintVertical_bias="0.373" />
 
     <EditText
-        android:id="@+id/signupInputAddress"
+        android:id="@+id/profileUpdate_InputAddress"
         android:layout_width="353dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -96,7 +94,7 @@
         app:layout_constraintVertical_bias="0.41" />
 
     <TextView
-        android:id="@+id/signup_Phone"
+        android:id="@+id/profileUpdate_Phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/phone"
@@ -110,23 +108,7 @@
         app:layout_constraintVertical_bias="0.456" />
 
     <TextView
-        android:id="@+id/signup_pageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cormorant_garamond_bold"
-        android:text="@string/page_title"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
-
-    <TextView
-        android:id="@+id/signup_email"
+        android:id="@+id/profileUpdate_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
@@ -140,7 +122,7 @@
         app:layout_constraintVertical_bias="0.543" />
 
     <EditText
-        android:id="@+id/signupInputEmail"
+        android:id="@+id/profileUpdate_InputEmail"
         android:layout_width="348dp"
         android:layout_height="49dp"
         android:ems="10"
@@ -154,7 +136,7 @@
         app:layout_constraintVertical_bias="0.595" />
 
     <TextView
-        android:id="@+id/signup_password"
+        android:id="@+id/profileUpdate_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
@@ -168,7 +150,7 @@
         app:layout_constraintVertical_bias="0.639" />
 
     <EditText
-        android:id="@+id/signupInputPassword"
+        android:id="@+id/profileUpdate_InputPassword"
         android:layout_width="349dp"
         android:layout_height="48dp"
         android:ems="10"
@@ -182,7 +164,7 @@
         app:layout_constraintVertical_bias="0.693" />
 
     <TextView
-        android:id="@+id/signup_reenterPwd"
+        android:id="@+id/profileUpdate_reenterPwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/re_enter_password"
@@ -196,7 +178,7 @@
         app:layout_constraintVertical_bias="0.733" />
 
     <EditText
-        android:id="@+id/signupInputReenterPwd"
+        android:id="@+id/profileUpdate_InputReenterPwd"
         android:layout_width="347dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -209,60 +191,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.79" />
 
-    <CheckBox
-        android:id="@+id/signup_checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accept terms and conditions"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.195"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.839" />
-
-    <CheckBox
-        android:id="@+id/signup_checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="I am not a robot"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.139"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.885" />
-
     <Button
-        android:id="@+id/signUpButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/profileUpdateButton"
+        android:layout_width="122dp"
+        android:layout_height="50dp"
         android:background="@android:color/transparent"
-        android:text="@string/signup"
-        android:textAlignment="center"
+        android:text="@string/user_saveProfileUpdates"
         android:textColor="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintHorizontal_bias="0.134"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
-
-    <TextView
-        android:id="@+id/signup_loginLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.943"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.894" />
 
     <ImageButton
-        android:id="@+id/signupInsertPicure"
+        android:id="@+id/profileUpdate_InsertPicure"
         android:layout_width="83dp"
         android:layout_height="76dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -273,7 +217,7 @@
         app:srcCompat="@drawable/ip1" />
 
     <EditText
-        android:id="@+id/signupInputPhone"
+        android:id="@+id/profileUpdate_InputPhone"
         android:layout_width="355dp"
         android:layout_height="43dp"
         android:ems="10"
@@ -283,5 +227,17 @@
         app:layout_constraintHorizontal_bias="0.714"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileUpdat_upIcon"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007"
+        app:srcCompat="@drawable/dp2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

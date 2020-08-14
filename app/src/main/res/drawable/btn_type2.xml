@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--button color-->
+    <!--gradient android:startColor="AF81E4" android:endColor="AF81E4" -->
+    <!--curved edge button-->
+    <corners android:radius="15dp" />
+
+
+</shape>

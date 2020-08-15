@@ -184,22 +184,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.917" />
 
-    <Button
-        android:id="@+id/admin_deleteVehicleBtn"
-        android:layout_width="130dp"
-        android:layout_height="55dp"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#F7FFFFFF"
-        android:text="@string/vehicle_deleteBtn"
-        android:textAlignment="viewEnd"
-        android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
-
     <TextView
         android:id="@+id/admin_updateVehiclePgTitle"
         android:layout_width="262dp"

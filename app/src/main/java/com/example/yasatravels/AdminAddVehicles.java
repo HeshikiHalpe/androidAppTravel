@@ -11,7 +11,7 @@ public class AdminAddVehicles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_vehicles);
 
-        //enable back button on action bar to navigate back to manage vehicles admin page
+        //enable back button on action bar to navigate back to manage rides admin page
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }

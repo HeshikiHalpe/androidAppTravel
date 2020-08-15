@@ -4,10 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#00FFFFFF"
-    android:focusable="auto"
-    android:focusableInTouchMode="true"
-    tools:context=".Activity2">
+    tools:context=".UserHome">
 
     <TextView
         android:id="@+id/homeAppName"
@@ -153,7 +150,7 @@
         app:srcCompat="@drawable/home_contact_icon" />
 
     <ImageButton
-        android:id="@+id/homeProfileIcon"
+        android:id="@+id/home_profileIcon"
         android:layout_width="63dp"
         android:layout_height="49dp"
         android:backgroundTint="#00FFFFFF"

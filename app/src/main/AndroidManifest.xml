@@ -9,14 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AdminUpdateVehicles">
-            <intent-filter>
+        <activity
+            android:name=".ViewRide"
+            android:parentActivityName=".ManageRides">
+            <!--intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter-->
         </activity>
-        <activity android:name=".AdminAddVehicles">
+        <activity android:name=".ManageRides">
+            <!--intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter-->
+        </activity>
+        <activity android:name=".RidesSearchResults">
             <!--intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,15 +33,17 @@
             </intent-filter-->
         </activity>
         <activity
-            android:name=".UpdateUserProfile"
-            android:parentActivityName=".UserProfile" />
+            android:name=".RidesDetails"
+            android:parentActivityName=".RidesSearchResults" />
         <activity
-            android:name=".UserProfile"
-            android:parentActivityName=".Activity2" />
+            android:name=".AboutUs"
+            android:parentActivityName=".UserHome" />
         <activity
-            android:name=".Activity2"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity">
+            android:name=".ContactUs"
+            android:parentActivityName=".UserHome" />
+        <activity
+            android:name=".AdminUpdateVehicles"
+            android:parentActivityName=".ViewRide">
 
             <!--
             intent-filter>
@@ -41,6 +52,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter
             -->
+        </activity>
+        <activity
+            android:name=".AdminAddVehicles"
+            android:parentActivityName=".ManageRides">
+
+            <!--
+            intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter
+            -->
+        </activity>
+        <activity
+            android:name=".UpdateUserProfile"
+            android:parentActivityName=".UserProfile" />
+        <activity
+            android:name=".UserProfile"
+            android:parentActivityName=".UserHome" />
+        <activity
+            android:name=".UserHome"
+            android:parentActivityName=".UserSignUp" />
+        <activity android:name=".UserSignUp">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

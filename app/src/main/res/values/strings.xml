@@ -52,4 +52,38 @@
     <string name="vehicle_updateBtn">Save Updates</string>
     <string name="vehicle_deleteBtn">Delete Vehicle</string>
 
+    <!--Cotact us strings-->
+    <string name="contact_title">Get Contact Us !</string>
+    <string name="contact_call">Call us on : 0711345678</string>
+    <string name="caontact_mail">Send us emails via : yasatravels@gmail.com</string>
+    <string name="contact_follow">Follow us on :</string>
+
+    <!--About us strings-->
+    <string name="about_title">About Us !</string>
+    <string name="description1">We Yasa Travels here to help you out to plan your holyday, vacation, trip to somewhere. With this app you can easly contact with evailable hotels and vehecles. Also you can contact an experienced tour guide to join with you for flexible prices to explore in your journey more. </string>
+    <string name="about_des2">copyrights@received</string>
+
+    <!--Rides search Results user side strings-->
+    <string name="searchResultsRTopic">Search results for Rides in "District_Name" </string>
+    <string name="srRname">Car (T-002)</string>
+    <string name="srRname2">Tuk-Tuk</string>
+    <string name="srRdescription">FULLY INCLUSIVE PRICING-
+Easy Payment Terms. Affordable Fully Inclusive Pricing. No Hidden Extras
+    24 HOURS HOTLINE SUPPORT-
+Reliable, Safe, Comfortable and Quality Service 24 Hours and 7 Days a Week
+    </string>
+    <string name="srRShortdes">Fast &amp; Safe. We offer the fast and most convenient taxi service promising complete customer satisfaction with each and every ride.</string>
+    <string name="srRShortdes2">Ride Taxi offer Budget Taxi Service in Sri Lanka. We are the best solution for you to get around in Sri Lanka cheaply and safely.</string>
+    <string name="contactBtn">Contact Us for Bookings..</string>
+    <string name="submit">Submit</string>
+
+    <!--Manage rides admin side strings-->
+    <string name="car1">Saman Rent a cars</string>
+    <string name="car1des">Owner: Saman Kumara  Tel:0773425637</string>
+    <string name="car2">One-Key Cabs</string>
+    <string name="car3">Shantha Rent a Cars</string>
+    <string name="car4">Lanka TukTuks</string>
+    <string name="car5">Nilu Cabs</string>
+    <string name="topic2">Rides Management</string>
+
 </resources>

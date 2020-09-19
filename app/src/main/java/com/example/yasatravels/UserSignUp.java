@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +18,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,19 +28,23 @@ public class UserSignUp extends AppCompatActivity {
     private EditText regName, regAddress, regPhone, regEmail, regPassword, regPassword2;
     private Button signupButton;
     private TextView regToLogin;
+    private ProgressDialog dialog;
 
-    FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
-    DatabaseReference reference = rootNode.getReference("users").child("User");
+    private FirebaseAuth auth;
+    private String userId;
+    private FirebaseDatabase rootNode = FirebaseDatabase.getInstance();
+    private DatabaseReference reference = rootNode.getReference().child("User");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_sign_up);
+        auth = FirebaseAuth.getInstance();
+        dialog = new ProgressDialog(this);
         createUser();
     }
 
     private void createUser() {
-        //hooks for all xml elements
         regName = findViewById(R.id.signupInputName);
         regAddress = findViewById(R.id.signupInputAddress);
         regPhone = findViewById(R.id.signupInputPhone);
@@ -44,29 +52,62 @@ public class UserSignUp extends AppCompatActivity {
         regPassword = findViewById(R.id.signupInputPassword);
         regPassword2 = findViewById(R.id.signupInputReenterPwd);
         regToLogin = findViewById(R.id.signup_loginLink);
+        signupButton = findViewById(R.id.signUpButton);
 
-        signupButton = (Button) findViewById(R.id.signUpButton);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openUserHome();
+                final String name = regName.getText().toString().trim();
+                final String address = regAddress.getText().toString().trim();
+                final String phone = regPhone.getText().toString().trim();
+                final String email = regEmail.getText().toString().trim();
+                final String password = regPassword.getText().toString().trim();
+                String conformPassword = regPassword2.getText().toString().trim();
 
-                //save data in firebase on button click
-                //get all the values
-                String name = regName.getText().toString().trim();
-                String address = regAddress.getText().toString().trim();
-                String phone = regPhone.getText().toString().trim();
-                String email = regEmail.getText().toString().trim();
-                String password = regPassword.getText().toString().trim();
+                if (TextUtils.isEmpty(name)) {
+                    regName.setError("Name is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(address)) {
+                    regAddress.setError("Address is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(phone)) {
+                    regPhone.setError("Phone number is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(email)) {
+                    regPhone.setError("Email is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(password)) {
+                    regPhone.setError("Password is Required");
+                    return;
+                }
+                if (TextUtils.isEmpty(conformPassword)) {
+                    regPassword2.setError("Password is Required");
+                    return;
+                }
+                if (!TextUtils.equals(password, conformPassword)) {
+                    regPassword2.setError("Passwords are not matched");
+                    return;
+                }
 
-                User use = new User(name, address, phone, email, password);
-                reference.child(phone).setValue(use).addOnCompleteListener(new OnCompleteListener<Void>() {
+                dialog.setMessage("Sending Data...");
+                dialog.show();
+
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<Void> task) {
+                    public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                            Toast.makeText(getApplicationContext(), "Registration Success", Toast.LENGTH_SHORT).show();
+                            userId = auth.getCurrentUser().getUid();
+                            User newUser = new User(name, address,phone,email,password);
+                            reference.child(userId).setValue(newUser);
                         } else {
-                            Toast.makeText(getApplicationContext(), "Fail", Toast.LENGTH_LONG).show();
+                            dialog.dismiss();
+                            Toast.makeText(getApplicationContext(), "Registration Fail", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
